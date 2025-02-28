@@ -6,9 +6,10 @@ def int_to_roman(num):
     ]
     
     result = ""
-    while num >= roman_numbers[0]:
-        result += roman_numbers[1]
-        num -= roman_numbers[0]
+    for integer, romen in roman_numbers:
+        while num >= integer:
+            result += romen
+            num -= integer
     
     return result
 
